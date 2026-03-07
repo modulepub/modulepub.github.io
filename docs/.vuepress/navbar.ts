@@ -11,7 +11,7 @@ export const zhNavbar = defineNavbarConfig([
   {
     text: 'TG开发文档',
     icon: 'icon-park-outline:setting-two',
-    link: '/dev/tgBoot.md',
+    link: '/dev/tg.md',
     activeMatch: '^/dev/',
   }
 ])

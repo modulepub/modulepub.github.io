@@ -11,7 +11,8 @@ const zhConfig = defineCollection({
   linkPrefix: '/dev',
   // 根据文件结构自动生成侧边栏
   sidebar: [
-    { text: '整体架构', link: '/dev/tgBoot.md' },
+    { text: '树-图架构', link: '/dev/tg.md' },
+    { text: '架构实现', link: '/dev/tgBoot.md' },
     { text: '支付模块', link: '/dev/pay.md' },
     { text: 'EXCEL导入导出模块', link: '/dev/excel.md' }
     ]
@@ -37,7 +38,8 @@ const enConfig = defineCollection({
   linkPrefix: '/dev',
   // 根据文件结构自动生成侧边栏
   sidebar: [
-    { text: 'Overall Architecture', link: '/dev/tgBoot.md' },
+    { text: 'Tree-Graph Architecture', link: '/dev/tg.md' },
+    { text: 'Architecture realization', link: '/dev/tgBoot.md' },
     { text: 'Payment Module', link: '/dev/pay.md' },
     { text: 'Excel Import & Export Module', link: '/dev/excel.md' }
   ]

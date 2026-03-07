@@ -8,9 +8,9 @@ config:
     forceDark: true
     effect: lightning
     hero:
-      name: 开源平台
+      name: 开源模块平台
       tagline: 开放 包容 共赢
-      text: 聚焦代码生产力，为开源社区赋能！
+      text: 聚焦代码生产力，为开源社区创造价值！
       actions:
         -
           theme: alt

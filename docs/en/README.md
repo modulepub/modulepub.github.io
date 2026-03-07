@@ -8,9 +8,9 @@ config:
     forceDark: true
     effect: lightning
     hero:
-      name: Open Source Platform
+      name: Open-source module Platform
       tagline: Openness, Inclusiveness, Win-Win
-      text: Focus on code productivity, empower the open-source community!
+      text: We focus on enhancing code productivity and generating value for the open-source community!
       actions:
         -
           theme: alt

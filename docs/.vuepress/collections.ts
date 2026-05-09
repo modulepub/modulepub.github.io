@@ -1,56 +1,107 @@
 import { defineCollection, defineCollections } from 'vuepress-theme-plume'
 
+const zhTgBootItems = [
+  { text: '总览', link: '/dev/tg-boot/' },
+  { text: '树-图架构', link: '/dev/tg-boot/tree-graph-architecture/' },
+  { text: 'starter-module', link: '/dev/tg-boot/starter-module/' },
+  { text: 'runner', link: '/dev/tg-boot/runner/' },
+  { text: 'plugins', link: '/dev/tg-boot/plugins/' },
+  { text: 'components · 总览', link: '/dev/tg-boot/components/' },
+  { text: 'common', link: '/dev/tg-boot/components/common/' },
+  { text: 'system', link: '/dev/tg-boot/components/system/' },
+  { text: 'trade', link: '/dev/tg-boot/components/trade/' },
+  { text: 'wechat', link: '/dev/tg-boot/components/wechat/' },
+  { text: 'file', link: '/dev/tg-boot/components/file/' },
+  { text: 'dict', link: '/dev/tg-boot/components/dict/' },
+  { text: 'cms', link: '/dev/tg-boot/components/cms/' },
+  { text: 'im', link: '/dev/tg-boot/components/im/' },
+  { text: 'excel', link: '/dev/tg-boot/components/excel/' },
+  { text: 'ocr', link: '/dev/tg-boot/components/ocr/' },
+  { text: 'sms', link: '/dev/tg-boot/components/sms/' },
+  { text: 'generator', link: '/dev/tg-boot/components/generator/' },
+  { text: 'job', link: '/dev/tg-boot/components/job/' },
+  { text: 'business · 总览', link: '/dev/tg-boot/business/' },
+  { text: 'customer', link: '/dev/tg-boot/business/customer/' },
+  { text: 'dating', link: '/dev/tg-boot/business/dating/' },
+  { text: 'tg-manage-vue', link: '/dev/tg-boot/frontend-tg-manage-vue/' },
+]
+
+const enTgBootItems = [
+  { text: 'Overview', link: '/en/dev/tg-boot/' },
+  { text: 'Tree-Graph Architecture', link: '/en/dev/tg-boot/tree-graph-architecture/' },
+  { text: 'starter-module', link: '/en/dev/tg-boot/starter-module/' },
+  { text: 'runner', link: '/en/dev/tg-boot/runner/' },
+  { text: 'plugins', link: '/en/dev/tg-boot/plugins/' },
+  { text: 'components · hub', link: '/en/dev/tg-boot/components/' },
+  { text: 'common', link: '/en/dev/tg-boot/components/common/' },
+  { text: 'system', link: '/en/dev/tg-boot/components/system/' },
+  { text: 'trade', link: '/en/dev/tg-boot/components/trade/' },
+  { text: 'wechat', link: '/en/dev/tg-boot/components/wechat/' },
+  { text: 'file', link: '/en/dev/tg-boot/components/file/' },
+  { text: 'dict', link: '/en/dev/tg-boot/components/dict/' },
+  { text: 'cms', link: '/en/dev/tg-boot/components/cms/' },
+  { text: 'im', link: '/en/dev/tg-boot/components/im/' },
+  { text: 'excel', link: '/en/dev/tg-boot/components/excel/' },
+  { text: 'ocr', link: '/en/dev/tg-boot/components/ocr/' },
+  { text: 'sms', link: '/en/dev/tg-boot/components/sms/' },
+  { text: 'generator', link: '/en/dev/tg-boot/components/generator/' },
+  { text: 'job', link: '/en/dev/tg-boot/components/job/' },
+  { text: 'business · hub', link: '/en/dev/tg-boot/business/' },
+  { text: 'customer', link: '/en/dev/tg-boot/business/customer/' },
+  { text: 'dating', link: '/en/dev/tg-boot/business/dating/' },
+  { text: 'tg-manage-vue', link: '/en/dev/tg-boot/frontend-tg-manage-vue/' },
+]
+
 const zhConfig = defineCollection({
-  // doc 类型，该类型带有侧边栏
   type: 'doc',
-  // 文档集合所在目录，相对于 `docs/`
   dir: 'dev',
-  // 文档标题，它将用于在页面的面包屑导航中显示
-  title: 'TG开发文档',
-  // 相关文章的链接前缀
+  title: '技术文档',
   linkPrefix: '/dev',
-  // 根据文件结构自动生成侧边栏
   sidebar: [
-    { text: '树-图架构', link: '/dev/tg.md' },
-    { text: '架构实现', link: '/dev/tgBoot.md' },
-    { text: '支付模块', link: '/dev/pay.md' },
-    { text: 'EXCEL导入导出模块', link: '/dev/excel.md' }
-    ]
+    {
+      text: 'TG-boot',
+      collapsed: false,
+      items: zhTgBootItems,
+    },
+    {
+      text: '共识算法',
+      collapsed: false,
+      items: [
+        {
+          text: '基于时间特性的共识算法设计（V1）',
+          link: '/dev/consensus/time-based-consensus-design/',
+        },
+      ],
+    },
+    { text: 'EXCEL导入导出模块', link: '/dev/excel.md' },
+  ],
 })
 
-/**
- * 导出所有的 collections
- */
-export const zhCollections = defineCollections([
-  zhConfig
-])
-
-/* =================== locale: en-US ======================= */
+export const zhCollections = defineCollections([zhConfig])
 
 const enConfig = defineCollection({
-  // doc 类型，该类型带有侧边栏
   type: 'doc',
-  // 文档集合所在目录，相对于 `docs/en/`
   dir: 'dev',
-  // 文档标题，它将用于在页面的面包屑导航中显示
-  title: 'Configuration Guide',
-  // 相关文章的链接前缀
+  title: 'Technical Documentation',
   linkPrefix: '/dev',
-  // 根据文件结构自动生成侧边栏
   sidebar: [
-    { text: 'Tree-Graph Architecture', link: '/dev/tg.md' },
-    { text: 'Architecture realization', link: '/dev/tgBoot.md' },
-    { text: 'Payment Module', link: '/dev/pay.md' },
-    { text: 'Excel Import & Export Module', link: '/dev/excel.md' }
-  ]
+    {
+      text: 'TG-boot',
+      collapsed: false,
+      items: enTgBootItems,
+    },
+    {
+      text: 'Consensus Algorithms',
+      collapsed: false,
+      items: [
+        {
+          text: 'Time-Based Consensus Design (V1)',
+          link: '/en/dev/consensus/time-based-consensus-design/',
+        },
+      ],
+    },
+    { text: 'Excel Import & Export', link: '/en/dev/excel/' },
+  ],
 })
 
-
-
-/**
- * 导出所有的 collections
- */
-export const enCollections = defineCollections([
-  enConfig
-])
-
+export const enCollections = defineCollections([enConfig])

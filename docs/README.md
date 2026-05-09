@@ -15,5 +15,5 @@ config:
         -
           theme: alt
           text: 开发文档 →
-          link: /dev/tgBoot/
+          link: /dev/tg-boot/
 ---

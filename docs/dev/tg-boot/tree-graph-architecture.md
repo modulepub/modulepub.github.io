@@ -1,7 +1,7 @@
 ---
-title: tg
+title: 树-图架构（Tree-Graph Architecture）
 createTime: 2026/03/07 13:58:08
-permalink: /dev/a73ybah4/
+permalink: /dev/tg-boot/tree-graph-architecture/
 ---
 
 # 树-图架构（Tree-Graph Architecture）

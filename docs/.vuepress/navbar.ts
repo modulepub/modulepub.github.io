@@ -9,20 +9,20 @@ import { defineNavbarConfig } from 'vuepress-theme-plume'
 export const zhNavbar = defineNavbarConfig([
   { text: '首页', link: '/' },
   {
-    text: 'TG开发文档',
+    text: '技术文档',
     icon: 'icon-park-outline:setting-two',
-    link: '/dev/tg.md',
-    activeMatch: '^/dev/',
+    link: '/dev/tg-boot/',
+    activeMatch: '^/(en/)?dev/',
   }
 ])
 
 export const enNavbar = defineNavbarConfig([
   { text: 'Home', link: '/en/' },
   {
-    text: 'TG Development Document',
+    text: 'Technical Documentation',
     icon: 'icon-park-outline:setting-two',
-    link: '/en/dev/tg.md',
-    activeMatch: '^/dev/'
+    link: '/en/dev/tg-boot/',
+    activeMatch: '^/(en/)?dev/',
   }
 ])
 

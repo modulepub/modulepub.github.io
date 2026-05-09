@@ -15,5 +15,5 @@ config:
         -
           theme: alt
           text: development documentation →
-          link: /en/dev/tgBoot/
+          link: /en/dev/tg-boot/
 ---

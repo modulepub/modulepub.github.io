@@ -1,3 +1,8 @@
+---
+title: 基于时间特性的共识算法设计（时间长河共识算法修改V1版）
+createTime: 2026/05/09 10:37:43
+permalink: /dev/consensus/time-based-consensus-design/
+---
 # 基于时间特性的共识算法设计（时间长河共识算法修改V1版）
 
 # 摘要

@@ -1,23 +1,19 @@
 ---
-title: spring-boot-starter-generator
+title: spring-boot-starter-generator（已移除）
 createTime: 2026/05/09
 permalink: /dev/tg-boot/components/generator/
 ---
 
-# spring-boot-starter-generator
+# spring-boot-starter-generator（v3.6.0 已移除）
 
-**低代码代码生成**：基于数据库表结构与模板，生成实体、Mapper、Service、Controller 等脚手架。
+> **本模块已于 v3.6.0 下线**，不再维护低代码 / 可视化代码生成能力及配套管理端入口。
 
-## 对外能力
+## 替代方案
 
-- **Web**：`GeneratorController` 提供生成入口；单体默认启动后控制台提示 **`/pub/generator/index`**。
-- **契约**：`-api` 中存放生成相关的请求/响应模型与接口定义（若扩展前端或其他调用方，依赖 `-api` 即可）。
+本仓库定位已明确为 **面向 AI 助手与开发者的模块化单体**：请按 [TG-boot 总览](/dev/tg-boot/) 中的架构与命名约定，由 AI 或开发者**从表结构设计 → API 契约 → `*-biz` 实现**直接编写代码。
 
-## Maven 结构
+生成代码前请先阅读 [AI 编码规范](/dev/tg-boot/agents/)。
 
-- **`spring-boot-starter-generator-api`**：契约与公共模型。
-- **`spring-boot-starter-generator-biz`**：`BizGenerateAutoConfiguration`、模板资源与生成逻辑。
+## 对开发者的影响
 
-引入 **`spring-boot-starter-generator-biz`** 参与自动配置；数据库连接与生成路径等按项目 `application` 配置。
-
-**源码路径**：`tg-boot/spring-boot-starter-module/spring-boot-starter-components/spring-boot-starter-generator/`
+新功能请直接按总览「架构与代码约定」「开发风格」新增模块或扩展 `*-biz`；历史由生成器产生的 `crud` 目录可随业务改造逐步收敛为手写结构。

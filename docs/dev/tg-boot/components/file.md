@@ -1,9 +1,8 @@
----
+﻿---
 title: spring-boot-starter-file
 createTime: 2026/05/09
 permalink: /dev/tg-boot/components/file/
 ---
-
 # spring-boot-starter-file
 
 **文件上传与回查**：封装上传结果实体供前端展示 URL；支持分片上传、秒传等策略（以当前实现为准）。
@@ -26,5 +25,4 @@ permalink: /dev/tg-boot/components/file/
 - **`spring-boot-starter-file-biz`**：`BizFileAutoConfiguration`、控制器与存储适配。
 
 Spring Boot 版本以根 BOM / 父 `pom.xml` 为准。
-
-**源码路径**：`tg-boot/spring-boot-starter-module/spring-boot-starter-components/spring-boot-starter-file/`
+**源码路径**：`tg-boot/spring-boot-starter-module/spring-boot-starter-components/`

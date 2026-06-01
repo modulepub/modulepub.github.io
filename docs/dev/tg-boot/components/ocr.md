@@ -1,9 +1,8 @@
----
+﻿---
 title: spring-boot-starter-ocr
 createTime: 2026/05/09
 permalink: /dev/tg-boot/components/ocr/
 ---
-
 # spring-boot-starter-ocr
 
 **OCR 识别 HTTP 能力**：接收上传文件，调用底层 OCR 服务 Bean 完成识别并返回结构化结果。
@@ -20,5 +19,4 @@ permalink: /dev/tg-boot/components/ocr/
 ## 依赖建议
 
 若 OCR 实现放在其他模块，请在该模块注册命名一致的 `BizOcrService` Bean，或通过配置约定切换实现名称。
-
-**源码路径**：`tg-boot/spring-boot-starter-module/spring-boot-starter-components/spring-boot-starter-ocr/`
+**源码路径**：`tg-boot/spring-boot-starter-module/spring-boot-starter-components/`

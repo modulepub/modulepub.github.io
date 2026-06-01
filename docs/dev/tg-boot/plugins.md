@@ -1,9 +1,8 @@
----
+﻿---
 title: plugins（外置插件目录）
 createTime: 2026/05/09
 permalink: /dev/tg-boot/plugins/
 ---
-
 # plugins（外部插件目录）
 
 仓库根目录下的 **`plugins`** 用于存放**运行时外挂**的插件 JAR：宿主应用启动时会扫描该目录中的 `*.jar`，按 Spring Boot 自动装配约定加载其中的配置类，**无需把插件打进 `spring-boot-starter-runner` 再发布**。
@@ -29,5 +28,3 @@ permalink: /dev/tg-boot/plugins/
 ## 与源码中的 `*-plugin` 模块的关系
 
 Maven 工程里的 **`spring-boot-starter-*-plugin`** 负责编写与打包插件；构建得到的 JAR 可复制到本 **`plugins`** 目录（或部署环境的等价路径），由线上 runner **自加载**。同一插件也可作为普通 Maven 依赖编入 runner，二者按交付方式择一或组合使用。
-
-**源码路径**：`tg-boot/plugins/`（说明文档）及各 `*-plugin` 模块。

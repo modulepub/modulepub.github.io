@@ -1,9 +1,8 @@
----
+﻿---
 title: spring-boot-starter-wechat
 createTime: 2026/05/09
 permalink: /dev/tg-boot/components/wechat/
 ---
-
 # spring-boot-starter-wechat
 
 **微信集成**：网页授权、登录回调等与微信平台对接的能力（具体 scope 以代码与配置为准）。
@@ -25,5 +24,4 @@ permalink: /dev/tg-boot/components/wechat/
 ## 使用说明
 
 引入 **`spring-boot-starter-wechat-biz`**，在配置文件中填写微信 AppId、密钥等；与其他模块协作时仅依赖 `-api` 即可引用类型。
-
-**源码路径**：`tg-boot/spring-boot-starter-module/spring-boot-starter-components/spring-boot-starter-wechat/`
+**源码路径**：`tg-boot/spring-boot-starter-module/spring-boot-starter-components/`

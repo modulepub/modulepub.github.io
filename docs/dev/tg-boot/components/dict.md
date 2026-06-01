@@ -1,23 +1,21 @@
 ---
-title: spring-boot-starter-dict
+title: spring-boot-starter-dict（已移除）
 createTime: 2026/05/09
 permalink: /dev/tg-boot/components/dict/
 ---
 
-# spring-boot-starter-dict
+# spring-boot-starter-dict（v3.6.0 已移除）
 
-**数据字典与行政区域**：平台级枚举/字典项维护，及对前端友好的字典查询接口。
+> **本模块已于 v3.6.0 下线**，不再维护通用字典表、字典 HTTP 接口及前端统一字典渲染链路。
 
-## HTTP 概要
+## 替代方案
 
-- **公开**：`PubDictController`、`PubDictAreaController`。
-- **管理端**：`MgtDictItemController`；另有通用 CRUD 风格的 `DictController` / `DictItemController`（`curd` 包）。
+请按 [TG-boot 总览 · 关于舍弃字典模块的新约定](/dev/tg-boot/#关于舍弃字典模块的新约定) 执行：
 
-## Maven 结构
+- **业务常量 / 状态机**：在 `*-api` 用枚举或常量类定义。
+- **复杂选项**：独立业务表或专属管理功能。
+- **标准化公共数据**：独立表或受控同步。
 
-- **`spring-boot-starter-dict-api`**：字典领域契约与缓存/查询相关 SPI（若有）。
-- **`spring-boot-starter-dict-biz`**：`BizDictAutoConfiguration`、控制器与持久化。
+## 迁移说明
 
-业务表中的「编码」字段常与字典类型联动；跨模块引用字典时依赖 `-api` 类型或通过公开接口拉取。
-
-**源码路径**：`tg-boot/spring-boot-starter-module/spring-boot-starter-components/spring-boot-starter-dict/`
+字段仍遵循 `*Code` 存编码、前端按编码展示；**数据来源**从「平台字典服务」改为「模块内契约 + 业务数据」。升级时请清理对字典 Starter、字典 HTTP 接口的依赖。

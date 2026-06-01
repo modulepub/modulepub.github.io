@@ -1,25 +1,23 @@
----
+﻿---
 title: spring-boot-starter-excel
 createTime: 2026/05/09
 permalink: /en/dev/tg-boot/components/excel/
 ---
-
 # spring-boot-starter-excel
 
-**Excel import/export**: template-driven flows where business modules supply data and this starter handles rendering/parsing, limiting POI coupling in domain code.
+**Excel 导入导出**：模板驱动，业务侧主要提供数据接口，由本模块完成渲染与导入解析，降低业务代码与 POI 细节的耦合。
 
-## Capabilities
+## 对外能力
 
-- **HTTP**: `PubExcelController` plus other template/import/export endpoints (Swagger).
-- **Typical flow**: download template → user fills → upload import → sync/async validation → error report download (per service implementation).
+- **HTTP**：`PubExcelController`（及 `-biz` 内其它导出/模板下载入口，见 Swagger）。
+- **典型流程**：模板下载 → 用户填报 → 上传导入 → 异步或同步校验 → 错误明细下载（具体以当前 Service 实现为准）。
 
-## Maven layout
+## Maven 结构
 
-- **`spring-boot-starter-excel-api`**: contracts/shared models.
-- **`spring-boot-starter-excel-biz`**: `BizExcelAutoConfiguration`, templates, jobs.
+- **`spring-boot-starter-excel-api`**：导入导出契约与公共模型。
+- **`spring-boot-starter-excel-biz`**：`BizExcelAutoConfiguration`、模板与任务实现。
 
-Add **`spring-boot-starter-excel-biz`** to your `pom`; configure template paths and async executors in `application*.yml`. Frontend integration follows admin conventions (e.g. `tg-manage-vue`).
+## 使用说明
 
-See also [Excel import/export](/en/dev/excel.md).
-
-**Source**: `tg-boot/spring-boot-starter-module/spring-boot-starter-components/spring-boot-starter-excel/`
+在业务 `pom` 中引入 **`spring-boot-starter-excel-biz`**；按项目配置模板路径与异步线程池。前端集成方式随管理端（如 `tg-manage-vue`）约定。
+**源码路径**：`tg-boot/spring-boot-starter-module/spring-boot-starter-components/`

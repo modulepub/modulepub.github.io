@@ -1,30 +1,28 @@
----
+﻿---
 title: spring-boot-starter-file
 createTime: 2026/05/09
 permalink: /en/dev/tg-boot/components/file/
 ---
-
 # spring-boot-starter-file
 
-**Uploads and lookups**: wraps upload results for frontend URLs; supports chunked uploads, deduped uploads, etc. (per current implementation).
+**文件上传与回查**：封装上传结果实体供前端展示 URL；支持分片上传、秒传等策略（以当前实现为准）。
 
-## Public APIs
+## 对外 API（契约）
 
-- **`BizUploadService`**: upload façade.
-- **`ApiConfigService`**: storage/upload-related configuration reads.
+- **`BizUploadService`**：上传门面。
+- **`ApiConfigService`**：与存储/上传相关的配置读取。
 
-(OCR contracts such as **`BizOcrService`** live under **`spring-boot-starter-ocr-api`** and pair with OCR controllers.)
+（另有 OCR 相关契约位于 **`spring-boot-starter-ocr-api`** 包路径下的 `BizOcrService`，与 OCR 控制器配合使用。）
 
 ## HTTP
 
-- **`FileController`**: generic uploads (e.g. documented `generic/upload` with `sliceIndex` / `totalPieces`).
-- **`MgtFileController`**: admin file maintenance.
+- **`FileController`**：通用上传（如文档注释中的 `generic/upload`：可分片，`sliceIndex` / `totalPieces` 等）。
+- **`MgtFileController`**：管理端文件维护。
 
-## Maven layout
+## Maven 结构
 
-- **`spring-boot-starter-file-api`**: interfaces and models above.
-- **`spring-boot-starter-file-biz`**: `BizFileAutoConfiguration`, controllers, storage adapters.
+- **`spring-boot-starter-file-api`**：上述接口与模型。
+- **`spring-boot-starter-file-biz`**：`BizFileAutoConfiguration`、控制器与存储适配。
 
-Spring Boot version follows the root BOM/parent `pom.xml`.
-
-**Source**: `tg-boot/spring-boot-starter-module/spring-boot-starter-components/spring-boot-starter-file/`
+Spring Boot 版本以根 BOM / 父 `pom.xml` 为准。
+**源码路径**：`tg-boot/spring-boot-starter-module/spring-boot-starter-components/`

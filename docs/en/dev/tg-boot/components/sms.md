@@ -1,22 +1,22 @@
----
+﻿---
 title: spring-boot-starter-sms
 createTime: 2026/05/09
 permalink: /en/dev/tg-boot/components/sms/
 ---
-
 # spring-boot-starter-sms
 
-**SMS sending**: exposes **`BizSmsService`** (`spring-boot-starter-sms-api`) while vendors (Chuanglan, Xuanwu, …) swap via SPI beans inside `-biz`—**switch SMS providers through configuration, not business code**.
+**短信发送组件**：对上游暴露统一 **`ApiSmsSendService`**（`spring-boot-starter-sms-api`），具体厂商（创蓝、玄武等）在 `-biz` 中通过 SPI/实现类切换，**换短信平台只需改配置，不必改业务代码**。
 
-## Public API
+> **AI / 开发者**：新增或修改本模块 `crud/entity` 前必读仓库根目录 [AI 编码规范](/en/dev/tg-boot/agents/)（实体必须 `extends BaseEntity`，业务主键为 `smsXxxCode`，技术主键为 `id`）。
 
-- Methods such as **`BizSmsService.sendSms(String mobile, String content)`** (see interface Javadoc).
+## 对外 API
 
-## Maven layout
+- **`BizSmsService.sendSms(String mobile, String content)`** 等（以接口定义为准）。
 
-- **`spring-boot-starter-sms-api`**: `SmsProperties`, helpers, enums.
-- **`spring-boot-starter-sms-biz`**: `BizSmsAutoConfiguration`, default wiring, `Spi*SmsServiceImpl` vendor beans.
+## Maven 结构
 
-Use **`spring-boot-starter-sms-biz`** for auto-configuration; depend on `-api` alone when you only need contracts.
+- **`spring-boot-starter-sms-api`**：配置属性 `SmsProperties`、发送器工具类、常量枚举。
+- **`spring-boot-starter-sms-biz`**：`BizSmsAutoConfiguration`、默认业务实现与各厂商 `Spi*SmsServiceImpl`。
 
-**Source**: `tg-boot/spring-boot-starter-module/spring-boot-starter-components/spring-boot-starter-sms/`
+引入 **`spring-boot-starter-sms-biz`** 即可获得自动配置与实现；仅契约依赖可单独引入 `-api`。
+**源码路径**：`tg-boot/spring-boot-starter-module/spring-boot-starter-components/`

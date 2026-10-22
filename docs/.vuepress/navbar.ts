@@ -9,20 +9,43 @@ import { defineNavbarConfig } from 'vuepress-theme-plume'
 export const zhNavbar = defineNavbarConfig([
   { text: '首页', link: '/' },
   {
-    text: '技术文档',
-    icon: 'icon-park-outline:setting-two',
+    text: 'AI 编程框架',
+    icon: 'icon-park-outline:code',
+    link: '/ai/',
+    activeMatch: '^/ai/',
+  },
+  {
+    text: '人类社区',
+    icon: 'icon-park-outline:people',
+    link: '/community/',
+    activeMatch: '^/community/',
+  },
+  {
+    text: '深度手册',
+    icon: 'icon-park-outline:book-one',
     link: '/dev/tg-boot/',
-    activeMatch: '^/(en/)?dev/',
-  }
+    activeMatch: '^/dev/',
+  },
 ])
 
 export const enNavbar = defineNavbarConfig([
   { text: 'Home', link: '/en/' },
   {
-    text: 'Technical Documentation',
-    icon: 'icon-park-outline:setting-two',
+    text: 'AI Framework',
+    icon: 'icon-park-outline:code',
+    link: '/en/ai/',
+    activeMatch: '^/en/ai/',
+  },
+  {
+    text: 'Human Community',
+    icon: 'icon-park-outline:people',
+    link: '/en/community/',
+    activeMatch: '^/en/community/',
+  },
+  {
+    text: 'Deep Manual',
+    icon: 'icon-park-outline:book-one',
     link: '/en/dev/tg-boot/',
-    activeMatch: '^/(en/)?dev/',
-  }
+    activeMatch: '^/en/dev/',
+  },
 ])
-

@@ -1,5 +1,87 @@
 import { defineCollection, defineCollections } from 'vuepress-theme-plume'
 
+const aiSidebar = [
+  {
+    text: '开始',
+    collapsed: false,
+    items: [
+      { text: '总览 · 为什么是 TG-boot', link: '/ai/' },
+      { text: '设计动机', link: '/ai/why/' },
+      { text: '让 AI 启动项目', link: '/ai/quickstart/' },
+    ],
+  },
+  {
+    text: '理解框架',
+    collapsed: false,
+    items: [
+      { text: '架构与边界', link: '/ai/architecture/' },
+      { text: '模块地图', link: '/ai/modules/' },
+      { text: '多端中台 · uniapp', link: '/ai/uniapp-middle-platform/' },
+      { text: '跨模块契约', link: '/ai/contracts/' },
+    ],
+  },
+  {
+    text: '动手实践',
+    collapsed: false,
+    items: [
+      { text: 'AI 协作工作流', link: '/ai/ai-workflow/' },
+      { text: '实操 · 新增一个模块', link: '/ai/practice/' },
+      { text: '质量与上线', link: '/ai/quality/' },
+    ],
+  },
+  {
+    text: '资料',
+    collapsed: false,
+    items: [
+      { text: '深度手册索引', link: '/ai/reference/' },
+    ],
+  },
+]
+
+const communitySidebar = [
+  {
+    text: '总览',
+    collapsed: false,
+    items: [
+      { text: '人类社区项目', link: '/community/' },
+    ],
+  },
+  {
+    text: '白皮书',
+    collapsed: false,
+    items: [
+      { text: '机制总览', link: '/community/whitepaper/' },
+      { text: '执行与边界', link: '/community/whitepaper/execution/' },
+    ],
+  },
+  {
+    text: '项目与价值',
+    collapsed: false,
+    items: [
+      { text: '明星项目', link: '/community/projects/' },
+      { text: '如何实现资本向善', link: '/community/capital-for-good/' },
+      { text: '共创财富后转公益', link: '/community/wealth-to-public/' },
+      { text: '重塑价值', link: '/community/value-reset/' },
+    ],
+  },
+]
+
+const aiConfig = defineCollection({
+  type: 'doc',
+  dir: 'ai',
+  title: 'AI 编程框架',
+  linkPrefix: '/ai',
+  sidebar: aiSidebar,
+})
+
+const communityConfig = defineCollection({
+  type: 'doc',
+  dir: 'community',
+  title: '人类社区项目',
+  linkPrefix: '/community',
+  sidebar: communitySidebar,
+})
+
 const zhTgBootItems = [
   { text: '总览', link: '/dev/tg-boot/' },
   { text: 'AI 编码规范', link: '/dev/tg-boot/agents/' },
@@ -58,10 +140,10 @@ const enTgBootItems = [
   { text: 'tg-manage-vue', link: '/en/dev/tg-boot/frontend-tg-manage-vue/' },
 ]
 
-const zhConfig = defineCollection({
+const zhDevConfig = defineCollection({
   type: 'doc',
   dir: 'dev',
-  title: '技术文档',
+  title: '深度手册',
   linkPrefix: '/dev',
   sidebar: [
     {
@@ -79,11 +161,47 @@ const zhConfig = defineCollection({
         },
       ],
     },
-    { text: 'EXCEL导入导出模块', link: '/dev/excel.md' },
+    { text: 'EXCEL 导入导出模块', link: '/dev/excel.md' },
   ],
 })
 
-export const zhCollections = defineCollections([zhConfig])
+export const zhCollections = defineCollections([aiConfig, communityConfig, zhDevConfig])
+
+const enAiConfig = defineCollection({
+  type: 'doc',
+  dir: 'ai',
+  title: 'AI Framework',
+  linkPrefix: '/ai',
+  sidebar: [
+    {
+      text: 'English Edition',
+      collapsed: false,
+      items: [
+        { text: 'Framework manual', link: '/en/dev/tg-boot/' },
+        { text: 'AI coding rules', link: '/en/dev/tg-boot/agents/' },
+        { text: 'Architecture tests', link: '/en/dev/tg-boot/architecture-tests/' },
+        { text: 'Cross-module contracts', link: '/en/dev/tg-boot/cross-module-collaboration/' },
+        { text: 'Multi-end platform', link: '/en/ai/uniapp-middle-platform/' },
+      ],
+    },
+  ],
+})
+
+const enCommunityConfig = defineCollection({
+  type: 'doc',
+  dir: 'community',
+  title: 'Human Community',
+  linkPrefix: '/community',
+  sidebar: [
+    {
+      text: 'English Edition',
+      collapsed: false,
+      items: [
+        { text: 'Human community guide', link: '/en/community/guide/' },
+      ],
+    },
+  ],
+})
 
 const enConfig = defineCollection({
   type: 'doc',
@@ -110,4 +228,4 @@ const enConfig = defineCollection({
   ],
 })
 
-export const enCollections = defineCollections([enConfig])
+export const enCollections = defineCollections([enAiConfig, enCommunityConfig, enConfig])

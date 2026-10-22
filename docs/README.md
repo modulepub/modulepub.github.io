@@ -1,19 +1,7 @@
 ---
-pageLayout: home
-externalLinkIcon: false
+home: true
+title: AI 编程框架与人类社区
 config:
-  -
-    type: hero
+  - type: site-home
     full: true
-    forceDark: true
-    effect: lightning
-    hero:
-      name: 开源模块平台
-      tagline: 开放 包容 共赢
-      text: 聚焦代码生产力，为开源社区创造价值！
-      actions:
-        -
-          theme: alt
-          text: 开发文档 →
-          link: /dev/tg-boot/
 ---

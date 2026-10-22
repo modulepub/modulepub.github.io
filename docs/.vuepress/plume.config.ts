@@ -1,111 +1,92 @@
 /**
- * 查看以下文档了解主题配置
- * - @see https://theme-plume.vuejs.press/config/intro/ 配置说明
- * - @see https://theme-plume.vuejs.press/config/theme/ 主题配置项
- *
- * 请注意，对此文件的修改不会重启 vuepress 服务，而是通过热更新的方式生效
- * 但同时部分配置项不支持热更新，请查看文档说明
- * 对于不支持热更新的配置项，请在 `.vuepress/config.ts` 文件中配置
- *
- * 特别的，请不要在两个配置文件中重复配置相同的项，当前文件的配置项会覆盖 `.vuepress/config.ts` 文件中的配置
+ * Plume 主题配置。
+ * 站点文案、导航与集合在这里统一维护。
  */
 
 import { defineThemeConfig } from 'vuepress-theme-plume'
 import { enCollections, zhCollections } from './collections'
+import { zhHantCollections } from './collections.zh-Hant'
 import { enNavbar, zhNavbar } from './navbar'
+import { zhHantNavbar } from './navbar.zh-Hant'
 
-/**
- * @see https://theme-plume.vuejs.press/config/theme/
- */
 export default defineThemeConfig({
-  logo: 'https://theme-plume.vuejs.press/plume.png',
+  logo: '/logo.svg',
+  logoDark: '/logo.svg',
 
-  appearance: true,  // 配置 深色模式
+  // 全站使用深色科技主题，避免首页视觉与文档阅读体验割裂
+  appearance: 'force-dark',
+  home: '/',
 
-  social: [
-    { icon: 'github', link: 'https://gitee.com/pub_module/tg-boot.git' },
-  ],
-  // navbarSocialInclude: ['github'], // 允许显示在导航栏的 social 社交链接
-  // aside: true, // 页内侧边栏， 默认显示在右侧
-  // outline: [2, 3], // 页内大纲， 默认显示 h2, h3
+  outline: [2, 3],
+  aside: true,
+  prevPage: true,
+  nextPage: true,
 
-  /**
-   * 文章版权信息
-   * @see https://theme-plume.vuejs.press/guide/features/copyright/
-   */
-  // copyright: true,
-
-  // prevPage: true,   // 是否启用上一页链接
-  // nextPage: true,   // 是否启用下一页链接
-  // createTime: true, // 是否显示文章创建时间
-
-  /* 站点页脚 */
-  // footer: {
-  //   message: 'Power by <a target="_blank" href="https://v2.vuepress.vuejs.org/">VuePress</a> & <a target="_blank" href="https://theme-plume.vuejs.press">vuepress-theme-plume</a>',
-  //   copyright: '',
-  // },
-
-  /* 过渡动画 @see https://theme-plume.vuejs.press/config/theme/#transition */
-  // transition: {
-  //   page: true,        // 启用 页面间跳转过渡动画
-  //   postList: true,    // 启用 博客文章列表过渡动画
-  //   appearance: 'fade',  // 启用 深色模式切换过渡动画, 或配置过渡动画类型
-  // },
+  transition: {
+    page: true,
+    appearance: 'fade',
+  },
 
   locales: {
     '/': {
-      /**
-       * @see https://theme-plume.vuejs.press/config/theme/#profile
-       */
+      selectLanguageName: '简体中文',
+      selectLanguageText: '选择语言',
+      home: '/',
       profile: {
-        avatar: 'https://theme-plume.vuejs.press/plume.png',
+        avatar: '/logo.svg',
         name: 'module.pub',
-        description: '',
-        // circle: true,
-        // location: '',
-        // organization: '',
+        description: '开放 · 包容 · 共赢',
+        organization: 'module.pub',
+        layout: 'right',
       },
-
       navbar: zhNavbar,
       collections: zhCollections,
-
-      /**
-       * 公告板
-       * @see https://theme-plume.vuejs.press/guide/features/bulletin/
-       */
-       // bulletin: {
-       //   layout: 'top-right',
-       //   contentType: 'markdown',
-       //   title: '',
-       //   content: '',
-       // },
+      sidebarMenuLabel: '目录',
+      outlineLabel: '此页内容',
+      returnToTopLabel: '返回顶部',
+      prevPageLabel: '上一篇',
+      nextPageLabel: '下一篇',
+      homeText: '首页',
+    },
+    '/zh-Hant/': {
+      selectLanguageName: '繁體中文（港澳）',
+      selectLanguageText: '選擇語言',
+      home: '/zh-Hant/',
+      profile: {
+        avatar: '/logo.svg',
+        name: 'module.pub',
+        description: '開放 · 包容 · 共贏',
+        organization: 'module.pub',
+        layout: 'right',
+      },
+      navbar: zhHantNavbar,
+      collections: zhHantCollections,
+      sidebarMenuLabel: '目錄',
+      outlineLabel: '此頁內容',
+      returnToTopLabel: '返回頂部',
+      prevPageLabel: '上一篇',
+      nextPageLabel: '下一篇',
+      homeText: '首頁',
     },
     '/en/': {
-      /**
-       * @see https://theme-plume.vuejs.press/config/theme/#profile
-       */
+      selectLanguageName: 'English',
+      selectLanguageText: 'Select language',
+      home: '/en/',
       profile: {
-        avatar: 'https://theme-plume.vuejs.press/plume.png',
+        avatar: '/logo.svg',
         name: 'module.pub',
-        description: '',
-        // circle: true,
-        // location: '',
-        // organization: '',
+        description: 'Open · Inclusive · Win-win',
+        organization: 'module.pub',
+        layout: 'right',
       },
-
       navbar: enNavbar,
       collections: enCollections,
-
-      /**
-       * 公告板
-       * @see https://theme-plume.vuejs.press/guide/features/bulletin/
-       */
-       // bulletin: {
-       //   layout: 'top-right',
-       //   contentType: 'markdown',
-       //   title: '',
-       //   content: '',
-       // },
+      sidebarMenuLabel: 'Menu',
+      outlineLabel: 'On this page',
+      returnToTopLabel: 'Back to top',
+      prevPageLabel: 'Previous',
+      nextPageLabel: 'Next',
+      homeText: 'Home',
     },
   },
 })

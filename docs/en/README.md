@@ -1,19 +1,8 @@
 ---
-pageLayout: home
-externalLinkIcon: false
+home: true
+title: AI Framework & Human Community
+description: "An AI-native engineering framework and a human community protocol. Code that can be maintained, value that can be shared."
 config:
-  -
-    type: hero
+  - type: site-home-en
     full: true
-    forceDark: true
-    effect: lightning
-    hero:
-      name: Open-source module Platform
-      tagline: Openness, Inclusiveness, Win-Win
-      text: We focus on enhancing code productivity and generating value for the open-source community!
-      actions:
-        -
-          theme: alt
-          text: development documentation →
-          link: /en/dev/tg-boot/
 ---

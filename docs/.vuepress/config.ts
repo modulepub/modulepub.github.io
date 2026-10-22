@@ -20,18 +20,30 @@ export default defineUserConfig({
     '/': {
       title: 'module.pub',
       lang: 'zh-CN',
-      description: '',
+      description: 'AI 编程框架与人类社区项目：从可维护的代码，到可共治的价值。',
+    },
+    '/zh-Hant/': {
+      title: 'module.pub',
+      lang: 'zh-HK',
+      description: 'AI 編程框架與人類社區項目：從可維護的代碼，到可共治的價值。',
     },
     '/en/': {
       title: 'module.pub',
       lang: 'en-US',
-      description: '',
+      description: 'AI-native engineering framework and human community projects.',
     },
   },
 
   head: [
-    // 配置站点图标
-    ['link', { rel: 'icon', type: 'image/png', href: 'https://theme-plume.vuejs.press/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    ['meta', { name: 'theme-color', content: '#05070b' }],
+    ['meta', { name: 'color-scheme', content: 'dark' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:site_name', content: 'module.pub' }],
+    ['meta', { property: 'og:title', content: 'module.pub — AI 编程框架与人类社区' }],
+    ['meta', { property: 'og:description', content: '让代码生长，让价值回归。' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['script', {}, "(function () {\n  try {\n    var pref = localStorage.getItem('mc-locale');\n    var path = location.pathname;\n    var isRoot = path === '/' || path === '/index.html';\n    if (pref) {\n      if (isRoot && pref !== '/' && pref !== path) {\n        location.replace(pref);\n      }\n      return;\n    }\n    if (!isRoot) return;\n    var lang = ((navigator.languages && navigator.languages[0]) || navigator.language || 'zh-CN').toLowerCase();\n    var target = '/';\n    if (lang.indexOf('zh') === 0) {\n      if (/(hant|tw|hk|mo)/.test(lang)) target = '/zh-Hant/';\n    } else if (lang.indexOf('en') === 0) {\n      target = '/en/';\n    }\n    if (target !== '/') location.replace(target);\n  } catch (e) {}\n})();\n\ndocument.addEventListener('click', function (event) {\n  var target = event.target;\n  var link = target && target.closest\n    ? target.closest('.vp-navbar-translations a, .vp-nav-screen-translations a')\n    : null;\n  if (!link) return;\n  try {\n    var url = new URL(link.href, location.origin);\n    var p = url.pathname;\n    var choice = p.indexOf('/zh-Hant/') === 0 ? '/zh-Hant/' : (p.indexOf('/en/') === 0 ? '/en/' : '/');\n    localStorage.setItem('mc-locale', choice);\n  } catch (e) {}\n}, true);"],
   ],
 
   bundler: viteBundler(),
@@ -57,6 +69,12 @@ export default defineUserConfig({
      * @see https://theme-plume.vuejs.press/config/theme/#cache
      */
     cache: 'filesystem',
+
+    /**
+     * 关闭自动写入 frontmatter。
+     * 新文档使用文件路径生成路由，避免构建时往源码写入随机 permalink。
+     */
+    autoFrontmatter: false,
 
     /**
      * 为 markdown 文件自动添加 frontmatter 配置
@@ -185,9 +203,9 @@ export default defineUserConfig({
     //   locale: 'all',  // 为所有语言生成 llms 友好内容
     // }
     footer: {
-      message: 'welcome to tg.',
+      message: 'OPEN SOURCE · HUMAN COMMUNITY',
       // 自定义页脚文本（支持HTML）
-      copyright: 'copyright@module.pub'
+      copyright: '© 2026 module.pub · 以代码与共识，连接更多可能'
     },
   }),
 })

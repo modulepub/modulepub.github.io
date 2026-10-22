@@ -1,7 +1,7 @@
 ---
 title: TRC
 createTime: 2026/03/15 12:40:32
-permalink: /en/dev/h1c5qmnb/
+permalink: /en/dev/TRC/
 ---
 # 区块链|WEB3：时间长河共识算法（Time River Consensus Algorithm）（原命名为时间证明公式算法（TCC））
 

@@ -113,4 +113,21 @@ const devConfig = defineCollection({
   sidebar: devSidebar,
 })
 
-export const zhHantCollections = defineCollections([aiConfig, communityConfig, devConfig])
+const philosophyConfig = defineCollection({
+  type: 'doc',
+  dir: 'philosophy',
+  title: '哲思',
+  linkPrefix: '/philosophy',
+  sidebar: [
+    {
+      text: '哲思',
+      collapsed: false,
+      items: [
+        { text: '總覽', link: '/zh-Hant/philosophy/' },
+        { text: '時間長河共識算法（TRC）', link: '/zh-Hant/philosophy/trc/' },
+      ],
+    },
+  ],
+})
+
+export const zhHantCollections = defineCollections([aiConfig, communityConfig, philosophyConfig, devConfig])

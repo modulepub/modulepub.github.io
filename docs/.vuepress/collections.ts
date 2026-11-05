@@ -165,7 +165,24 @@ const zhDevConfig = defineCollection({
   ],
 })
 
-export const zhCollections = defineCollections([aiConfig, communityConfig, zhDevConfig])
+const philosophyConfig = defineCollection({
+  type: 'doc',
+  dir: 'philosophy',
+  title: '哲思',
+  linkPrefix: '/philosophy',
+  sidebar: [
+    {
+      text: '哲思',
+      collapsed: false,
+      items: [
+        { text: '总览', link: '/philosophy/' },
+        { text: '时间长河共识算法（TRC）', link: '/philosophy/trc/' },
+      ],
+    },
+  ],
+})
+
+export const zhCollections = defineCollections([aiConfig, communityConfig, philosophyConfig, zhDevConfig])
 
 const enAiConfig = defineCollection({
   type: 'doc',
@@ -228,4 +245,21 @@ const enConfig = defineCollection({
   ],
 })
 
-export const enCollections = defineCollections([enAiConfig, enCommunityConfig, enConfig])
+const enPhilosophyConfig = defineCollection({
+  type: 'doc',
+  dir: 'philosophy',
+  title: 'Philosophy',
+  linkPrefix: '/philosophy',
+  sidebar: [
+    {
+      text: 'Philosophy',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/philosophy/' },
+        { text: 'Time River Consensus (TRC)', link: '/en/philosophy/trc/' },
+      ],
+    },
+  ],
+})
+
+export const enCollections = defineCollections([enAiConfig, enCommunityConfig, enPhilosophyConfig, enConfig])

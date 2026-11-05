@@ -15,6 +15,12 @@ export const zhHantNavbar = defineNavbarConfig([
     activeMatch: '^/zh-Hant/community/',
   },
   {
+    text: '哲思',
+    icon: 'icon-park-outline:thinking-problem',
+    link: '/zh-Hant/philosophy/',
+    activeMatch: '^/zh-Hant/philosophy/',
+  },
+  {
     text: '深度手冊',
     icon: 'icon-park-outline:book-one',
     link: '/zh-Hant/dev/tg-boot/',

@@ -89,7 +89,7 @@ description: TG-boot 全量文档、组件手册、业务模块、运维与共�
     <h3>基于时间特性的共识算法（V1）</h3>
     <p>时间节点、权重与共识流程的设计文档。</p>
   </a>
-  <a class="doc-card" href="/dev/TRC/">
+  <a class="doc-card" href="/philosophy/trc/">
     <span class="doc-card__tag">TIME RIVER</span>
     <h3>时间长河共识算法</h3>
     <p>核心机制、时间节点作用、优势与局限性。</p>

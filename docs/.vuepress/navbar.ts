@@ -21,6 +21,12 @@ export const zhNavbar = defineNavbarConfig([
     activeMatch: '^/community/',
   },
   {
+    text: '哲思',
+    icon: 'icon-park-outline:thinking-problem',
+    link: '/philosophy/',
+    activeMatch: '^/philosophy/',
+  },
+  {
     text: '深度手册',
     icon: 'icon-park-outline:book-one',
     link: '/dev/tg-boot/',
@@ -41,6 +47,12 @@ export const enNavbar = defineNavbarConfig([
     icon: 'icon-park-outline:people',
     link: '/en/community/',
     activeMatch: '^/en/community/',
+  },
+  {
+    text: 'Philosophy',
+    icon: 'icon-park-outline:thinking-problem',
+    link: '/en/philosophy/',
+    activeMatch: '^/en/philosophy/',
   },
   {
     text: 'Deep Manual',

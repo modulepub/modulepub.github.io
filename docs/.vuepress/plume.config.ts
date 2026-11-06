@@ -49,7 +49,7 @@ export default defineThemeConfig({
       homeText: '首页',
     },
     '/zh-Hant/': {
-      selectLanguageName: '繁體中文（港澳）',
+      selectLanguageName: '繁體中文',
       selectLanguageText: '選擇語言',
       home: '/zh-Hant/',
       profile: {

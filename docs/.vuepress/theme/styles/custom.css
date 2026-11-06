@@ -1741,6 +1741,55 @@ html[lang="en-US"] .vp-navbar-translations .button::after {
   color: #a9c2ff;
 }
 
+.lp-model {
+  margin-top: 12px;
+  border-color: rgba(168, 121, 230, 0.2);
+  background:
+    radial-gradient(circle at 88% 20%, rgba(168, 121, 230, 0.1), transparent 38%),
+    radial-gradient(circle at 4% 100%, rgba(91, 140, 255, 0.05), transparent 40%),
+    rgba(11, 13, 24, 0.76);
+}
+
+.lp-model::before {
+  background: linear-gradient(90deg, transparent, rgba(168, 121, 230, 0.75), transparent);
+}
+
+.lp-model:hover {
+  border-color: rgba(168, 121, 230, 0.44);
+}
+
+.lp-model .lp-multiplatform__eyebrow {
+  color: #b9a0ef;
+}
+
+.lp-model .lp-multiplatform__arrow {
+  color: #9f7be0;
+}
+
+.lp-model__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  max-width: 290px;
+}
+
+.lp-model__tags span {
+  padding: 6px 10px;
+  border: 1px solid rgba(168, 121, 230, 0.18);
+  border-radius: 999px;
+  background: rgba(168, 121, 230, 0.05);
+  font-family: var(--vp-font-family-mono);
+  font-size: 7.5px;
+  letter-spacing: 0.04em;
+  color: #b7a2df;
+}
+
+@media (max-width: 900px) {
+  .lp-model__tags {
+    max-width: none;
+  }
+}
+
 /* split + steps + supports */
 
 .lp-split {

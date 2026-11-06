@@ -187,24 +187,6 @@ const steps = [
           </div>
           <span class="lp-multiplatform__arrow" aria-hidden="true">↗</span>
         </a>
-
-        <a class="lp-multiplatform lp-model" href="/zh-Hant/ai/synapse-field/">
-          <div class="lp-multiplatform__main">
-            <span class="lp-multiplatform__eyebrow">RESEARCH MODEL · SYNAPTIC FIELD</span>
-            <h3>突觸場 AI</h3>
-            <p>
-              自研大模型機制：結構、突觸權重、穩定性判據與休息。
-              它不是 Transformer 的換皮，而是從本體論到讀出規則的另一條路徑。
-            </p>
-          </div>
-          <div class="lp-model__tags">
-            <span>結構</span>
-            <span>突觸</span>
-            <span>穩定性</span>
-            <span>休息</span>
-          </div>
-          <span class="lp-multiplatform__arrow" aria-hidden="true">↗</span>
-        </a>
       </div>
     </section>
 

@@ -15,6 +15,12 @@ export const zhNavbar = defineNavbarConfig([
     activeMatch: '^/ai/',
   },
   {
+    text: '自研大模型',
+    icon: 'icon-park-outline:robot-one',
+    link: '/models/',
+    activeMatch: '^/models/',
+  },
+  {
     text: '人类社区',
     icon: 'icon-park-outline:people',
     link: '/community/',
@@ -41,6 +47,12 @@ export const enNavbar = defineNavbarConfig([
     icon: 'icon-park-outline:code',
     link: '/en/ai/',
     activeMatch: '^/en/ai/',
+  },
+  {
+    text: 'AI Models',
+    icon: 'icon-park-outline:robot-one',
+    link: '/en/models/',
+    activeMatch: '^/en/models/',
   },
   {
     text: 'Human Community',

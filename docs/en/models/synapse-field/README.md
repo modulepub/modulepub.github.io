@@ -131,7 +131,7 @@ This version is compared with the previous specification, not with Transformerâ€
 
 <div class="doc-note">
   <p>
-    The full Chinese paper is available at <a href="/ai/synapse-field/">/ai/synapse-field/</a>.
+    The full Chinese paper is available at <a href="/models/synapse-field/">/models/synapse-field/</a>.
     This English page is an overview, not a line-by-line translation.
   </p>
 </div>

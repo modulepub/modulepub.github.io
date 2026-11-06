@@ -167,24 +167,6 @@ const steps = [
           </div>
           <span class="lp-multiplatform__arrow" aria-hidden="true">↗</span>
         </a>
-
-        <a class="lp-multiplatform lp-model" href="/en/ai/synapse-field/">
-          <div class="lp-multiplatform__main">
-            <span class="lp-multiplatform__eyebrow">RESEARCH MODEL · SYNAPTIC FIELD</span>
-            <h3>Synaptic Field AI</h3>
-            <p>
-              A self-developed model mechanism built around structure, synaptic weights, stability and rest.
-              Not a reskin of Transformer, but another path from ontology to readout.
-            </p>
-          </div>
-          <div class="lp-model__tags">
-            <span>structure</span>
-            <span>synapse</span>
-            <span>stability</span>
-            <span>rest</span>
-          </div>
-          <span class="lp-multiplatform__arrow" aria-hidden="true">↗</span>
-        </a>
       </div>
     </section>
 

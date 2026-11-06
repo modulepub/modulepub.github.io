@@ -17,7 +17,6 @@ const aiSidebar = [
       { text: '架构与边界', link: '/ai/architecture/' },
       { text: '模块地图', link: '/ai/modules/' },
       { text: '多端中台 · uniapp', link: '/ai/uniapp-middle-platform/' },
-      { text: '自研模型 · 突触场 AI', link: '/ai/synapse-field/' },
       { text: '跨模块契约', link: '/ai/contracts/' },
     ],
   },
@@ -166,6 +165,23 @@ const zhDevConfig = defineCollection({
   ],
 })
 
+const modelsConfig = defineCollection({
+  type: 'doc',
+  dir: 'models',
+  title: '自研大模型',
+  linkPrefix: '/models',
+  sidebar: [
+    {
+      text: '自研大模型',
+      collapsed: false,
+      items: [
+        { text: '总览', link: '/models/' },
+        { text: '突触场 AI', link: '/models/synapse-field/' },
+      ],
+    },
+  ],
+})
+
 const blockchainConfig = defineCollection({
   type: 'doc',
   dir: 'blockchain',
@@ -183,7 +199,7 @@ const blockchainConfig = defineCollection({
   ],
 })
 
-export const zhCollections = defineCollections([aiConfig, communityConfig, blockchainConfig, zhDevConfig])
+export const zhCollections = defineCollections([aiConfig, modelsConfig, communityConfig, blockchainConfig, zhDevConfig])
 
 const enAiConfig = defineCollection({
   type: 'doc',
@@ -200,7 +216,6 @@ const enAiConfig = defineCollection({
         { text: 'Architecture tests', link: '/en/dev/tg-boot/architecture-tests/' },
         { text: 'Cross-module contracts', link: '/en/dev/tg-boot/cross-module-collaboration/' },
         { text: 'Multi-end platform', link: '/en/ai/uniapp-middle-platform/' },
-        { text: 'Synaptic Field AI', link: '/en/ai/synapse-field/' },
       ],
     },
   ],
@@ -247,6 +262,23 @@ const enConfig = defineCollection({
   ],
 })
 
+const enModelsConfig = defineCollection({
+  type: 'doc',
+  dir: 'models',
+  title: 'AI Models',
+  linkPrefix: '/models',
+  sidebar: [
+    {
+      text: 'AI Models',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/models/' },
+        { text: 'Synaptic Field AI', link: '/en/models/synapse-field/' },
+      ],
+    },
+  ],
+})
+
 const enBlockchainConfig = defineCollection({
   type: 'doc',
   dir: 'blockchain',
@@ -264,4 +296,4 @@ const enBlockchainConfig = defineCollection({
   ],
 })
 
-export const enCollections = defineCollections([enAiConfig, enCommunityConfig, enBlockchainConfig, enConfig])
+export const enCollections = defineCollections([enAiConfig, enModelsConfig, enCommunityConfig, enBlockchainConfig, enConfig])

@@ -9,6 +9,12 @@ export const zhHantNavbar = defineNavbarConfig([
     activeMatch: '^/zh-Hant/ai/',
   },
   {
+    text: '自研大模型',
+    icon: 'icon-park-outline:robot-one',
+    link: '/zh-Hant/models/',
+    activeMatch: '^/zh-Hant/models/',
+  },
+  {
     text: '人類社區',
     icon: 'icon-park-outline:people',
     link: '/zh-Hant/community/',

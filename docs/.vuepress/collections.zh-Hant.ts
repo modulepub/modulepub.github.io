@@ -17,7 +17,6 @@ const aiSidebar = [
       { text: '架構與邊界', link: '/zh-Hant/ai/architecture/' },
       { text: '模塊地圖', link: '/zh-Hant/ai/modules/' },
       { text: '多端中台 · uniapp', link: '/zh-Hant/ai/uniapp-middle-platform/' },
-      { text: '自研模型 · 突觸場 AI', link: '/zh-Hant/ai/synapse-field/' },
       { text: '跨模塊契約', link: '/zh-Hant/ai/contracts/' },
     ],
   },
@@ -114,6 +113,23 @@ const devConfig = defineCollection({
   sidebar: devSidebar,
 })
 
+const modelsConfig = defineCollection({
+  type: 'doc',
+  dir: 'models',
+  title: '自研大模型',
+  linkPrefix: '/models',
+  sidebar: [
+    {
+      text: '自研大模型',
+      collapsed: false,
+      items: [
+        { text: '總覽', link: '/zh-Hant/models/' },
+        { text: '突觸場 AI', link: '/zh-Hant/models/synapse-field/' },
+      ],
+    },
+  ],
+})
+
 const blockchainConfig = defineCollection({
   type: 'doc',
   dir: 'blockchain',
@@ -131,4 +147,4 @@ const blockchainConfig = defineCollection({
   ],
 })
 
-export const zhHantCollections = defineCollections([aiConfig, communityConfig, blockchainConfig, devConfig])
+export const zhHantCollections = defineCollections([aiConfig, modelsConfig, communityConfig, blockchainConfig, devConfig])

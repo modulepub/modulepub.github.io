@@ -165,24 +165,24 @@ const zhDevConfig = defineCollection({
   ],
 })
 
-const philosophyConfig = defineCollection({
+const blockchainConfig = defineCollection({
   type: 'doc',
-  dir: 'philosophy',
-  title: '哲思',
-  linkPrefix: '/philosophy',
+  dir: 'blockchain',
+  title: '区块链核心',
+  linkPrefix: '/blockchain',
   sidebar: [
     {
-      text: '哲思',
+      text: '区块链核心',
       collapsed: false,
       items: [
-        { text: '总览', link: '/philosophy/' },
-        { text: '时间长河共识算法（TRC）', link: '/philosophy/trc/' },
+        { text: '总览', link: '/blockchain/' },
+        { text: '时间长河共识算法（TRC）', link: '/blockchain/trc/' },
       ],
     },
   ],
 })
 
-export const zhCollections = defineCollections([aiConfig, communityConfig, philosophyConfig, zhDevConfig])
+export const zhCollections = defineCollections([aiConfig, communityConfig, blockchainConfig, zhDevConfig])
 
 const enAiConfig = defineCollection({
   type: 'doc',
@@ -245,21 +245,21 @@ const enConfig = defineCollection({
   ],
 })
 
-const enPhilosophyConfig = defineCollection({
+const enBlockchainConfig = defineCollection({
   type: 'doc',
-  dir: 'philosophy',
-  title: 'Philosophy',
-  linkPrefix: '/philosophy',
+  dir: 'blockchain',
+  title: 'Blockchain Core',
+  linkPrefix: '/blockchain',
   sidebar: [
     {
-      text: 'Philosophy',
+      text: 'Blockchain Core',
       collapsed: false,
       items: [
-        { text: 'Overview', link: '/en/philosophy/' },
-        { text: 'Time River Consensus (TRC)', link: '/en/philosophy/trc/' },
+        { text: 'Overview', link: '/en/blockchain/' },
+        { text: 'Time River Consensus (TRC)', link: '/en/blockchain/trc/' },
       ],
     },
   ],
 })
 
-export const enCollections = defineCollections([enAiConfig, enCommunityConfig, enPhilosophyConfig, enConfig])
+export const enCollections = defineCollections([enAiConfig, enCommunityConfig, enBlockchainConfig, enConfig])

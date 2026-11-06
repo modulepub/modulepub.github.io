@@ -89,7 +89,7 @@ description: TG-boot 全量文檔、組件手冊、業務模塊、運維與共�
     <h3>基於時間特性的共識算法（V1）</h3>
     <p>時間節點、權重與共識流程的設計文檔。</p>
   </a>
-  <a class="doc-card" href="/zh-Hant/philosophy/trc/">
+  <a class="doc-card" href="/zh-Hant/blockchain/trc/">
     <span class="doc-card__tag">TIME RIVER</span>
     <h3>時間長河共識算法</h3>
     <p>核心機制、時間節點作用、優勢與侷限性。</p>

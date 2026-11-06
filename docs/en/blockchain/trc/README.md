@@ -130,7 +130,7 @@ The target for a future TRC-release is a protocol with three “100%” properti
 
 <div class="doc-note">
   <p>
-    The full Chinese design paper is available at <a href="/philosophy/trc/">/philosophy/trc/</a>.
+    The full Chinese design paper is available at <a href="/blockchain/trc/">/blockchain/trc/</a>.
     This English page is an overview, not a line-by-line translation.
   </p>
 </div>

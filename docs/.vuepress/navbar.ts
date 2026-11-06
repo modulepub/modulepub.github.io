@@ -21,10 +21,10 @@ export const zhNavbar = defineNavbarConfig([
     activeMatch: '^/community/',
   },
   {
-    text: '哲思',
+    text: '区块链核心',
     icon: 'icon-park-outline:thinking-problem',
-    link: '/philosophy/',
-    activeMatch: '^/philosophy/',
+    link: '/blockchain/',
+    activeMatch: '^/blockchain/',
   },
   {
     text: '深度手册',
@@ -49,10 +49,10 @@ export const enNavbar = defineNavbarConfig([
     activeMatch: '^/en/community/',
   },
   {
-    text: 'Philosophy',
+    text: 'Blockchain Core',
     icon: 'icon-park-outline:thinking-problem',
-    link: '/en/philosophy/',
-    activeMatch: '^/en/philosophy/',
+    link: '/en/blockchain/',
+    activeMatch: '^/en/blockchain/',
   },
   {
     text: 'Deep Manual',

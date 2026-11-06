@@ -113,21 +113,21 @@ const devConfig = defineCollection({
   sidebar: devSidebar,
 })
 
-const philosophyConfig = defineCollection({
+const blockchainConfig = defineCollection({
   type: 'doc',
-  dir: 'philosophy',
-  title: '哲思',
-  linkPrefix: '/philosophy',
+  dir: 'blockchain',
+  title: '區塊鏈核心',
+  linkPrefix: '/blockchain',
   sidebar: [
     {
-      text: '哲思',
+      text: '區塊鏈核心',
       collapsed: false,
       items: [
-        { text: '總覽', link: '/zh-Hant/philosophy/' },
-        { text: '時間長河共識算法（TRC）', link: '/zh-Hant/philosophy/trc/' },
+        { text: '總覽', link: '/zh-Hant/blockchain/' },
+        { text: '時間長河共識算法（TRC）', link: '/zh-Hant/blockchain/trc/' },
       ],
     },
   ],
 })
 
-export const zhHantCollections = defineCollections([aiConfig, communityConfig, philosophyConfig, devConfig])
+export const zhHantCollections = defineCollections([aiConfig, communityConfig, blockchainConfig, devConfig])

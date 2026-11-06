@@ -15,10 +15,10 @@ export const zhHantNavbar = defineNavbarConfig([
     activeMatch: '^/zh-Hant/community/',
   },
   {
-    text: '哲思',
+    text: '區塊鏈核心',
     icon: 'icon-park-outline:thinking-problem',
-    link: '/zh-Hant/philosophy/',
-    activeMatch: '^/zh-Hant/philosophy/',
+    link: '/zh-Hant/blockchain/',
+    activeMatch: '^/zh-Hant/blockchain/',
   },
   {
     text: '深度手冊',

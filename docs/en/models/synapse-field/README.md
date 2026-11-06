@@ -120,15 +120,6 @@ Breaking a already stable structure remains expensive. A person must repeatedly 
 
 Searching for “which structure catches this manifestation” and verifying “is this structure currently the strongest pull” become the same kind of operation once structures are indexed on edges: verification reads A’s outgoing edges; search, if it can only scan all structures, grows with the number of structures; with an index, search degenerates to reading existing edges. The conjecture is that as manifestations increase, the ratio of search cost to verification cost tends toward 1. This is an analogy for the relationship after indexing, not part of the argument in section 5. Whether the ratio reaches 1 is unknown.
 
-## 7. What improved
-
-This version is compared with the previous specification, not with Transformer’s hallucination rate.
-
-- Rest now normalizes or decays high-entropy incoming edges, so positive edges rise relatively; the previous version only stopped writing and ρ did not change.
-- The paper explicitly does not compare hallucination rates with Transformer; section 5 is an internal comparison.
-- ρ uses one formula; θ = 2/3 always means the leader has at least twice the competition mass C.
-- E is defined as a post-hoc diagnostic, not part of readout.
-
 <div class="doc-note">
   <p>
     The full Chinese paper is available at <a href="/models/synapse-field/">/models/synapse-field/</a>.

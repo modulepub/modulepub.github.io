@@ -91,8 +91,8 @@ description: TG-boot 全量文檔、組件手冊、業務模塊、運維與共�
   </a>
   <a class="doc-card" href="/zh-Hant/blockchain/trc/">
     <span class="doc-card__tag">TIME RIVER</span>
-    <h3>時間長河共識算法</h3>
-    <p>核心機制、時間節點作用、優勢與侷限性。</p>
+    <h3>時間長河共識算法（TRC 落地版）</h3>
+    <p>抽籤分權、焊接定史、信用擔保與追償平復。</p>
   </a>
   <a class="doc-card" href="/zh-Hant/dev/excel/">
     <span class="doc-card__tag">EXCEL</span>

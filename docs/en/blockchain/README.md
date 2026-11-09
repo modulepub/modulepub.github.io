@@ -14,8 +14,8 @@ description: Research on blockchain mechanisms, consensus algorithms and value i
 
 <div class="doc-cards">
   <a class="doc-card" href="/en/blockchain/trc/">
-    <span class="doc-card__tag">CONSENSUS · TRC-V1</span>
-    <h3>Time River Consensus (TRC)</h3>
-    <p>A design attempt to put the irreversibility of time into consensus: time guardians, Planck time nodes and a transaction-driven history chain.</p>
+    <span class="doc-card__tag">CONSENSUS · TRC v4</span>
+    <h3>Time-River Consensus (TRC) — Implementation Draft</h3>
+    <p>Lottery-based rotation, welded history, credit-backed transactions and a recourse waterfall — without majority voting.</p>
   </a>
 </div>

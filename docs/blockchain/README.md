@@ -13,8 +13,8 @@ description: 区块链底层机制、共识算法与价值基础设施的研究�
 
 <div class="doc-cards">
   <a class="doc-card" href="/blockchain/trc/">
-    <span class="doc-card__tag">CONSENSUS · TRC-V1</span>
-    <h3>时间长河共识算法（TRC）</h3>
-    <p>把“时间不可逆”写进共识：时间守护节点、普朗克时间节点、交易驱动推进与历史链。</p>
+    <span class="doc-card__tag">CONSENSUS · TRC v4</span>
+    <h3>时间长河共识算法（TRC）落地版</h3>
+    <p>抽签分权、焊接定史、信用担保、追偿平复：一条不靠多数投票的单父哈希链。</p>
   </a>
 </div>

@@ -13,8 +13,8 @@ description: 區塊鏈底層機制、共識算法與價值基礎設施的研究�
 
 <div class="doc-cards">
   <a class="doc-card" href="/zh-Hant/blockchain/trc/">
-    <span class="doc-card__tag">CONSENSUS · TRC-V1</span>
-    <h3>時間長河共識算法（TRC）</h3>
-    <p>把“時間不可逆”寫進共識：時間守護節點、普朗克時間節點、交易驅動推進與歷史鏈。</p>
+    <span class="doc-card__tag">CONSENSUS · TRC v4</span>
+    <h3>時間長河共識算法（TRC）落地版</h3>
+    <p>抽籤分權、焊接定史、信用擔保、追償平復：一條不靠多數投票的單父哈希鏈。</p>
   </a>
 </div>

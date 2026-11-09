@@ -82,7 +82,6 @@ const devSidebar = [
     text: '研究檔案',
     collapsed: false,
     items: [
-      { text: '時間長河共識算法', link: '/zh-Hant/dev/TRC/' },
       { text: '基於時間特性的共識算法', link: '/zh-Hant/dev/consensus/time-based-consensus-design/' },
       { text: 'Excel 導入導出', link: '/zh-Hant/dev/excel/' },
     ],
@@ -141,7 +140,7 @@ const blockchainConfig = defineCollection({
       collapsed: false,
       items: [
         { text: '總覽', link: '/zh-Hant/blockchain/' },
-        { text: '時間長河共識算法（TRC）', link: '/zh-Hant/blockchain/trc/' },
+        { text: '時間長河共識算法（TRC 落地版）', link: '/zh-Hant/blockchain/trc/' },
       ],
     },
   ],

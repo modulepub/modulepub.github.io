@@ -193,7 +193,7 @@ const blockchainConfig = defineCollection({
       collapsed: false,
       items: [
         { text: '总览', link: '/blockchain/' },
-        { text: '时间长河共识算法（TRC）', link: '/blockchain/trc/' },
+        { text: '时间长河共识算法（TRC 落地版）', link: '/blockchain/trc/' },
       ],
     },
   ],
@@ -290,7 +290,7 @@ const enBlockchainConfig = defineCollection({
       collapsed: false,
       items: [
         { text: 'Overview', link: '/en/blockchain/' },
-        { text: 'Time River Consensus (TRC)', link: '/en/blockchain/trc/' },
+        { text: 'Time-River Consensus (TRC v4)', link: '/en/blockchain/trc/' },
       ],
     },
   ],
